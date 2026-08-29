@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akash Web Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+overflow-x:hidden;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.nav-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#2563eb;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#2563eb;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding-top:80px;
+background:
+linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#2563eb;
+}
+
+.hero p{
+font-size:20px;
+color:#64748b;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:linear-gradient(135deg,#2563eb,#3b82f6);
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.section-title{
+font-size:42px;
+text-align:center;
+margin-bottom:50px;
+}
+
+.about{
+padding:100px 0;
+}
+
+.about-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+font-size:18px;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-content">
+
+<div class="logo">
+Akash.
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h1>
+I Build <span>Premium Websites</span>
+For Businesses
+</h1>
+
+<p>
+Professional websites that help businesses
+get more customers and build trust online.
+</p>
+
+<a href="#contact" class="btn">
+Hire Me
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about-box">
+
+Hello, I'm Akash. I create modern,
+responsive and professional websites for
+businesses, freelancers and personal brands.
+
+</div>
+
+</div>
+
+</section>
+<style>
+
+.services{
+padding:100px 0;
+background:#ffffff;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(37,99,235,.15);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+color:#64748b;
+line-height:1.7;
+}
+
+.projects{
+padding:100px 0;
+background:#f8fafc;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.project{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+}
+
+.project img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project-content{
+padding:25px;
+}
+
+.project-content h3{
+margin-bottom:10px;
+}
+
+.project-content p{
+color:#64748b;
+}
+
+.stats{
+padding:100px 0;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-box{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.stat-box h2{
+font-size:40px;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+</style>
+
+<section class="services" id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+My Services
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Business Website</h3>
+<p>
+Professional websites for local businesses,
+companies and startups.
+</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>
+Modern portfolio websites for freelancers,
+designers and professionals.
+</p>
+</div>
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>
+High converting landing pages for products,
+services and marketing campaigns.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<h2 class="section-title">
+Why Choose Me
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h2>10+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat-box">
+<h2>100%</h2>
+<p>Responsive Design</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+<div class="stat-box">
+<h2>Fast</h2>
+<p>Delivery</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Featured Projects
+</h2>
+
+<div class="project-grid">
+
+<div class="project">
+
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
+
+<div class="project-content">
+<h3>Business Website</h3>
+<p>
+Premium company website with modern UI.
+</p>
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931" alt="">
+
+<div class="project-content">
+<h3>Portfolio Website</h3>
+<p>
+Clean and modern portfolio design.
+</p>
+</div>
+
+</div>
+
+<div class="project">
+
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="">
+
+<div class="project-content">
+<h3>Landing Page</h3>
+<p>
+Conversion-focused landing page design.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<style>
+
+.contact{
+padding:100px 0;
+background:#ffffff;
+}
+
+.contact-box{
+background:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+max-width:700px;
+margin:auto;
+}
+
+.contact-box p{
+margin:10px 0;
+color:#64748b;
+}
+
+.footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:15px 20px;
+border-radius:50px;
+font-weight:600;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+z-index:999;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.05);
+}
+
+</style>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<div class="contact-box">
+
+<h3 style="margin-bottom:15px;">
+Let's Build Your Website
+</h3>
+
+<p>Email: yourmail@gmail.com</p>
+
+<p>Phone: +91 9876543210</p>
+
+<br>
+
+<a href="#" class="btn">
+Send Message
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<a href="https://wa.me/919876543210"
+class="whatsapp-btn">
+WhatsApp
+</a>
+
+<footer class="footer">
+<p>
+© 2026 Akash Web Studio. All Rights Reserved.
+</p>
+</footer>
+
+</body>
+</html>
