@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE Dining</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0b;
+color:white;
+overflow-x:hidden;
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+letter-spacing:4px;
+color:#d4af37;
+font-family:'Cormorant Garamond',serif;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h4{
+letter-spacing:5px;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.hero-content h1{
+font-size:90px;
+line-height:1;
+font-family:'Cormorant Garamond',serif;
+margin-bottom:25px;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+opacity:.85;
+}
+
+.hero-buttons{
+margin-top:35px;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:50px;
+text-decoration:none;
+display:inline-block;
+margin:10px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-gold{
+background:#d4af37;
+color:black;
+}
+
+.btn-outline{
+border:2px solid #d4af37;
+color:#d4af37;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:60px;
+margin-bottom:60px;
+font-family:'Cormorant Garamond',serif;
+color:#d4af37;
+}
+.dish-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.dish-card{
+background:#111;
+padding:40px;
+border-radius:20px;
+border:1px solid rgba(212,175,55,.2);
+transition:.4s;
+}
+
+.dish-card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.dish-card h3{
+font-size:30px;
+margin-bottom:15px;
+color:#d4af37;
+font-family:'Cormorant Garamond',serif;
+}
+
+.chef-section{
+background:#111;
+text-align:center;
+}
+
+.chef-content{
+max-width:850px;
+margin:auto;
+}
+
+.chef-content h2{
+font-size:65px;
+color:#d4af37;
+margin-bottom:25px;
+font-family:'Cormorant Garamond',serif;
+}
+
+.chef-content p{
+line-height:1.9;
+opacity:.85;
+font-size:18px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.gallery-card{
+height:240px;
+background:#111;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:26px;
+color:#d4af37;
+border:1px solid rgba(212,175,55,.2);
+transition:.4s;
+}
+
+.gallery-card:hover{
+transform:scale(1.05);
+}
+
+.review-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(212,175,55,.2);
+}
+
+.review-card p{
+margin-top:15px;
+opacity:.85;
+}
+
+.reservation{
+text-align:center;
+}
+
+.reservation h2{
+font-size:65px;
+color:#d4af37;
+font-family:'Cormorant Garamond',serif;
+margin-bottom:20px;
+}
+
+footer{
+background:black;
+padding:80px 8%;
+text-align:center;
+}
+
+footer h2{
+font-size:42px;
+color:#d4af37;
+font-family:'Cormorant Garamond',serif;
+margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:55px;
+}
+
+.nav-links{
+display:none;
+}
+
+.section-title{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+LUXE
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Menu</a>
+<a href="#">Gallery</a>
+<a href="#">Reviews</a>
+<a href="#">Contact</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h4>FINE DINING EXPERIENCE</h4>
+
+<h1>
+Not Just Food.<br>
+An Experience.
+</h1>
+
+<p>
+Experience luxury dining crafted by world-class chefs with unforgettable flavors and unforgettable ambience.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn btn-gold">
+Reserve Table
+</a>
+
+<a href="#" class="btn btn-outline">
+View Menu
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Signature Dishes
+</h2>
+
+<div class="dish-container">
+
+<div class="dish-card">
+<h3>Wagyu Steak</h3>
+<p>Premium grilled steak crafted by our master chef.</p>
+</div>
+
+<div class="dish-card">
+<h3>Truffle Pasta</h3>
+<p>Luxury handmade pasta with black truffle flavor.</p>
+</div>
+
+<div class="dish-card">
+<h3>Royal Dessert</h3>
+<p>Elegant dessert created for unforgettable evenings.</p>
+</div>
+
+</div>
+
+</section>
+<section class="chef-section">
+
+<div class="chef-content">
+
+<h2>
+Meet Our Master Chef
+</h2>
+
+<p>
+With over 15 years of culinary excellence, our chef creates dishes that blend art, passion and unforgettable taste.
+Every plate is designed to deliver a luxury dining experience unlike any other.
+</p>
+
+<br>
+
+<a href="#" class="btn btn-gold">
+Our Story
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Luxury Experience
+</h2>
+
+<div class="gallery">
+
+<div class="gallery-card">Fine Dining</div>
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" width="100%">
+<div class="gallery-card">Private Events</div>
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349" width="100%">
+<div class="gallery-card">Chef Specials</div>
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" width="100%">
+<div class="gallery-card">Luxury Ambience</div>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" width="100%">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Guest Reviews
+</h2>
+
+<div class="review-box">
+
+<div class="review-card">
+★★★★★
+<p>
+"The best dining experience I have ever had."
+</p>
+</div>
+
+<div class="review-card">
+★★★★★
+<p>
+"Luxury atmosphere and amazing food."
+</p>
+</div>
+
+<div class="review-card">
+★★★★★
+<p>
+"Perfect for special occasions."
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="reservation">
+
+<h2>
+Reserve Your Table
+</h2>
+
+<p>
+Book your unforgettable dining experience today.
+</p>
+
+<br>
+
+<a href="#" class="btn btn-gold">
+Reserve Now
+</a>
+
+</section>
+
+<footer>
+
+<h2>LUXE Dining</h2>
+
+<p>
+Luxury Restaurant Experience
+</p>
+
+<br>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+<a href="https://wa.me/919999999999"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;">
+WhatsApp
+</a>
+</body>
+</html>
