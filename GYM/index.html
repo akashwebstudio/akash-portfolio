@@ -1,0 +1,314 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerFit Gym</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 0;
+background:rgba(15,23,42,.95);
+z-index:1000;
+}
+
+.nav-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#22c55e;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:800px;
+margin:auto;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#22c55e;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+font-size:42px;
+text-align:center;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#22c55e;
+}
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.price-box{
+background:#1e293b;
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.price-box h2{
+color:#22c55e;
+margin:15px 0;
+}
+
+.contact{
+text-align:center;
+}
+
+.footer{
+background:black;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-content">
+
+<div class="logo">PowerFit</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h1>
+Transform Your <span>Body</span>
+Transform Your Life
+</h1>
+
+<p>
+Professional trainers, modern equipment and personalized fitness programs.
+</p>
+
+<a href="#contact" class="btn">
+Join Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Personal Training</h3>
+<p>One-on-one fitness coaching.</p>
+</div>
+
+<div class="card">
+<h3>Weight Loss</h3>
+<p>Customized fat loss programs.</p>
+</div>
+
+<div class="card">
+<h3>Muscle Building</h3>
+<p>Strength and bodybuilding plans.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="plans">
+
+<div class="container">
+
+<h2 class="section-title">
+Membership Plans
+</h2>
+
+<div class="pricing">
+
+<div class="price-box">
+<h3>Basic</h3>
+<h2>₹999 / Month</h2>
+<p>Gym Access</p>
+</div>
+
+<div class="price-box">
+<h3>Standard</h3>
+<h2>₹1999 / Month</h2>
+<p>Gym + Trainer</p>
+</div>
+
+<div class="price-box">
+<h3>Premium</h3>
+<h2>₹2999 / Month</h2>
+<p>Full Fitness Package</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<p>📞 +91 9999999999</p>
+<br>
+
+<a href="https://wa.me/919999999999" class="btn">
+WhatsApp Now
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer">
+<p>© 2026 PowerFit Gym. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
