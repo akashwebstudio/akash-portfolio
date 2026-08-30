@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarePlus Clinic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#2563eb;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1666214280557-f1b5022eb634");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h4{
+letter-spacing:4px;
+margin-bottom:15px;
+color:#60a5fa;
+}
+
+.hero h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.doctors{
+background:#ffffff;
+}
+
+.doctor-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.doctor{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.doctor img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.doctor-info{
+padding:25px;
+text-align:center;
+}
+
+.testimonials{
+background:#ffffff;
+}
+
+.contact{
+background:#2563eb;
+color:white;
+text-align:center;
+}
+
+.contact h2{
+font-size:45px;
+margin-bottom:15px;
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">CarePlus</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#doctors">Doctors</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h4>TRUSTED HEALTHCARE</h4>
+
+<h1>
+Professional Care<br>
+For Your Family
+</h1>
+
+<p>
+Experienced doctors, modern facilities and patient-focused healthcare services.
+</p>
+
+<a href="https://wa.me/918860153518" class="btn">
+Book Appointment
+</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>General Checkup</h3>
+<p>Complete health examination and consultation.</p>
+</div>
+
+<div class="card">
+<h3>Dental Care</h3>
+<p>Advanced dental treatment and cleaning.</p>
+</div>
+
+<div class="card">
+<h3>Emergency Care</h3>
+<p>Quick response for urgent medical needs.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="doctors" id="doctors">
+
+<h2 class="section-title">
+Meet Our Doctors
+</h2>
+
+<div class="doctor-grid">
+
+<div class="doctor">
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" alt="">
+<div class="doctor-info">
+<h3>Dr. Sarah Wilson</h3>
+<p>General Physician</p>
+</div>
+</div>
+
+<div class="doctor">
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d" alt="">
+<div class="doctor-info">
+<h3>Dr. Michael Lee</h3>
+<p>Dental Specialist</p>
+</div>
+</div>
+
+<div class="doctor">
+<img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f" alt="">
+<div class="doctor-info">
+<h3>Dr. Emily Brown</h3>
+<p>Cardiology Expert</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="testimonials" id="reviews">
+
+<h2 class="section-title">
+Patient Reviews
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>★★★★★</h3>
+<p>Excellent doctors and friendly staff.</p>
+</div>
+
+<div class="card">
+<h3>★★★★★</h3>
+<p>Very professional treatment and care.</p>
+</div>
+
+<div class="card">
+<h3>★★★★★</h3>
+<p>Highly recommended healthcare clinic.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>
+Need Medical Help?
+</h2>
+
+<p>
+Book your appointment today.
+</p>
+
+<br>
+
+<a href="https://wa.me/918860153518" class="btn">
+Book Now
+</a>
+
+</section>
+
+<footer>
+© 2026 CarePlus Clinic. All Rights Reserved.
+</footer>
+
+<a href="https://wa.me/918860153518" class="whatsapp">
+WhatsApp
+</a>
+
+</body>
+</html>
